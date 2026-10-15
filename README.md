@@ -45,7 +45,7 @@ A RESTful healthcare backend built with **Node.js, Express, and PostgreSQL**. It
 
 ## Project structure
 
-```text
+``` text
 whatbytes-healthcare-backend/
 ├── scripts/
 │   └── init-db.js              # Initializes the database schema
@@ -72,6 +72,7 @@ whatbytes-healthcare-backend/
 │   ├── app.js
 │   └── server.js
 ├── tests/
+│   │   └── smoke.test.js
 ├── .env.example
 ├── .gitignore
 ├── package.json
