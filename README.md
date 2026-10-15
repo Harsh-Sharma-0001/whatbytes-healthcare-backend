@@ -6,10 +6,7 @@ management, and patient--doctor assignments, with request validation and
 ownership checks.
 
 > **Assignment framework note:** The recruitment email reportedly
-> permits Django or Node.js, while the linked assignment document
-> specifies Django REST Framework. This implementation uses Node.js and
-> Express. Confirm with WhatBytes that this framework is accepted before
-> submitting.
+> permits Django or Node.js. This implementation uses Node.js and Express.
 
 ## Contents
 
@@ -500,15 +497,9 @@ tests easy to review.
 
 ## Submission checklist
 
--   [ ] Confirm with WhatBytes that Node.js/Express is accepted for the
-    assignment.
 -   [ ] Ensure `.env` is ignored by Git.
 -   [ ] Ensure no credentials, JWT secrets, or real patient data are
     committed.
 -   [ ] Verify a clean setup with `npm install` and `npm run db:init`.
 -   [ ] Start the server and verify `GET /health`.
 -   [ ] Run the Postman endpoint and ownership tests.
--   [ ] Include this README and, if useful, an exported Postman
-    collection.
--   [ ] Push the project to GitHub and share the repository link through
-    the requested recruitment email thread.
