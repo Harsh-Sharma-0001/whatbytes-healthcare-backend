@@ -1,6 +1,10 @@
 # WhatBytes Healthcare Backend
 
-A RESTful healthcare backend built with **Node.js, Express, and PostgreSQL**. It provides JWT-based authentication, patient and doctor management, and patient–doctor assignments, with request validation and ownership checks.
+> A RESTful healthcare API built with **Node.js**, **Express.js**, and **PostgreSQL**.
+>
+> Includes JWT authentication, patient and doctor management, patient–doctor assignments, request validation, and ownership-based access control.
+
+---
 
 ## Contents
 
@@ -16,7 +20,8 @@ A RESTful healthcare backend built with **Node.js, Express, and PostgreSQL**. It
 - [Security and authorization](#security-and-authorization)
 - [Testing with Postman](#testing-with-postman)
 - [Troubleshooting](#troubleshooting)
-- [Submission checklist](#submission-checklist)
+
+---
 
 ## Features
 
@@ -28,6 +33,8 @@ A RESTful healthcare backend built with **Node.js, Express, and PostgreSQL**. It
 - Zod request validation and centralized error handling.
 - PostgreSQL constraints, foreign keys, uniqueness checks, and indexes.
 - Helmet, CORS configuration, request-body size limits, and rate limiting.
+
+---
 
 ## Technology Stack
 
@@ -42,6 +49,8 @@ A RESTful healthcare backend built with **Node.js, Express, and PostgreSQL**. It
 | Validation          | Zod                                |
 | Security Middleware | Helmet, CORS, `express-rate-limit` |
 | Development Server  | Nodemon                            |
+
+---
 
 ## Project structure
 
@@ -80,6 +89,8 @@ whatbytes-healthcare-backend/
 └── README.md
 ```
 
+---
+
 ## Prerequisites
 
 - Node.js 18+ and npm
@@ -92,6 +103,8 @@ Check your Node.js and npm versions:
 node --version
 npm --version
 ```
+
+---
 
 ## Getting started
 
@@ -169,6 +182,8 @@ GET http://localhost:3000/health
 
 Expected status: `200 OK`.
 
+---
+
 ## Environment variables
 
 Use `.env.example` and `src/config/env.js` as the source of truth for supported variable names and defaults. Typical settings include:
@@ -182,6 +197,8 @@ Use `.env.example` and `src/config/env.js` as the source of truth for supported 
 | `BCRYPT_ROUNDS`         | bcrypt password-hashing cost                             |
 
 Do not publish actual values from `.env`.
+
+---
 
 ## Authentication
 
@@ -219,6 +236,8 @@ Access tokens expire according to `JWT_ACCESS_EXPIRES_IN` (15 minutes by default
 ```
 
 Use test credentials for local development, not a real account password.
+
+---
 
 ## API reference
 
@@ -313,6 +332,8 @@ Example request body:
 
 Both IDs must refer to existing records. Duplicate patient–doctor assignments return `409 Conflict`.
 
+---
+
 ## Errors and status codes
 
 Validation errors use a structured response such as:
@@ -343,6 +364,8 @@ Validation errors use a structured response such as:
 
 Exact messages depend on the endpoint and error condition.
 
+---
+
 ## Security and authorization
 
 - **Password security:** Passwords are hashed with bcrypt and are not returned in API responses.
@@ -356,6 +379,8 @@ Exact messages depend on the endpoint and error condition.
 - **HTTP protections:** Helmet, CORS configuration, request-body limits, and rate limiting are enabled.
 
 > This is an assignment project, not a production security or healthcare-compliance assessment. Use synthetic data for development and testing.
+
+---
 
 ## Testing with Postman
 
@@ -377,6 +402,8 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
 
 Save and export the Postman collection to make the API and authorization tests easy to review.
+
+---
 
 ## Troubleshooting
 
@@ -408,10 +435,14 @@ Save and export the Postman collection to make the API and authorization tests e
 
 - Check whether the email is already registered or the patient–doctor assignment already exists.
 
-## Submission checklist
+---
 
-- [ ] Ensure `.env` is ignored by Git.
-- [ ] Ensure no credentials, JWT secrets, or real patient data are committed.
-- [ ] Verify a clean setup with `npm install` and `npm run db:init`.
-- [ ] Start the server and verify `GET /health`.
-- [ ] Run the Postman endpoint and ownership tests.
+## Project Status
+
+The core API workflows, authentication, and ownership-based access controls have been implemented and tested locally.
+
+This project is intended for assignment evaluation and development use. Use synthetic data when testing; it is not a production healthcare system or a healthcare-compliance certification.
+
+---
+
+*Built with Node.js, Express, and PostgreSQL.*
