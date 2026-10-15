@@ -2,11 +2,8 @@
 
 A RESTful healthcare backend built with **Node.js, Express, and
 PostgreSQL**. It provides JWT-based authentication, patient and doctor
-management, and patient--doctor assignments, with request validation and
+management, and patient-doctor assignments, with request validation and
 ownership checks.
-
-> **Assignment framework note:** The recruitment email reportedly
-> permits Django or Node.js. This implementation uses Node.js and Express.
 
 ## Contents
 
@@ -38,19 +35,19 @@ ownership checks.
 -   Helmet, CORS configuration, request-body size limits, and rate
     limiting.
 
-## Technology stack
+## Technology Stack
 
-  Component             Technology
-  --------------------- ------------------------------------
-  Runtime               Node.js 18+
-  HTTP framework        Express
-  Database              PostgreSQL
-  Database access       `pg` with parameterized SQL
-  Authentication        JWT (HS256)
-  Password hashing      `bcryptjs`
-  Validation            Zod
-  Security middleware   Helmet, CORS, `express-rate-limit`
-  Development server    Nodemon
+| Component | Technology |
+|---|---|
+| Runtime | Node.js 18+ |
+| HTTP Framework | Express.js |
+| Database | PostgreSQL |
+| Database Access | `pg` with parameterized SQL |
+| Authentication | JWT (HS256) |
+| Password Hashing | `bcryptjs` |
+| Validation | Zod |
+| Security Middleware | Helmet, CORS, `express-rate-limit` |
+| Development Server | Nodemon |
 
 ## Project structure
 
